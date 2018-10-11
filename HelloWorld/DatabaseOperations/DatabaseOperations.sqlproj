@@ -4,16 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <Name>Hackathon_dev</Name>
+    <Name>DatabaseOperations</Name>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>4.1</ProjectVersion>
-    <ProjectGuid>{5725aa42-cc46-495b-ae9c-06bc7ed1933b}</ProjectGuid>
+    <ProjectGuid>{3b14a915-62ec-4d61-8720-11962b601a89}</ProjectGuid>
     <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
     <OutputType>Database</OutputType>
     <RootPath>
     </RootPath>
-    <RootNamespace>Hackathon_dev</RootNamespace>
-    <AssemblyName>Hackathon_dev</AssemblyName>
+    <RootNamespace>DatabaseOperations</RootNamespace>
+    <AssemblyName>DatabaseOperations</AssemblyName>
     <ModelCollation>1033, CI</ModelCollation>
     <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
     <DeployToDatabase>True</DeployToDatabase>
@@ -57,17 +57,15 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
-    <Folder Include="db_schema" />
-    <Folder Include="db_schema\data" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="db_schema\create_project.sql" />
-    <Build Include="db_schema\insert status.sql" />
-    <Build Include="db_schema\priority_calc.sql" />
+    <Compile Include="EmbeddedFunctions.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DatabaseOperations.publish.xml" />
   </ItemGroup>
 </Project>

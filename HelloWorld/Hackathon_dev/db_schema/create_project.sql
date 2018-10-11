@@ -12,7 +12,7 @@ status_updated datetime
 create table category(
 	ID uniqueidentifier primary key default newid(),
 	description varchar(100) not null,
-	priority_calc int not null
+	priority_value int not null
 );
 
 create table funding(
@@ -26,4 +26,6 @@ create table status(
 	ID uniqueidentifier primary key default newid(),
 	description varchar(max) not null
 );
+
+
 
