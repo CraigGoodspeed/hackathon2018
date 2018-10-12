@@ -67,5 +67,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="DatabaseOperations.publish.xml" />
+    <None Include="hackathon_dev.bak" />
   </ItemGroup>
 </Project>
