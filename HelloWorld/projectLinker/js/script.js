@@ -43,7 +43,7 @@ function processResult() {
         colModel: [
             { name: 'ProjectID', index: 'id',hidden:true, key:true},
             { name: 'ProjectName', index: 'ProjectName', width: 300, cellattr: function (rowId, tv, rawObject, cm, rdata) { return 'style="white-space: normal;"' } },
-            { name: 'ProjectDescription', index: 'ProjectDescription', width: 500, cellattr: function (rowId, tv, rawObject, cm, rdata) { return 'style="white-space: normal;"' } },
+            { name: 'ProjectDescription', index: 'ProjectDescription', width: 700, cellattr: function (rowId, tv, rawObject, cm, rdata) { return 'style="white-space: normal;"' } },
             { name: 'dateCreated', index: 'dateCreated', width: 200 },
             { name: 'CommunityDescription', index: 'CommunityDescription', width: 200 },
             { name: 'ContractorName', index: 'ContractorName', width: 200 },

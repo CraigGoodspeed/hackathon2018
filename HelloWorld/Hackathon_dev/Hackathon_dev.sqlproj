@@ -64,6 +64,7 @@
     <Build Include="db_schema\create_project.sql" />
     <Build Include="db_schema\insert status.sql" />
     <Build Include="db_schema\priority_calc.sql" />
+    <Build Include="db_schema\create_specialisation.sql" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
