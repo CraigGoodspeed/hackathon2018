@@ -16,15 +16,18 @@
 function processResult() {
     var selectedItem = $('#ddlType').val() * 1;
     var func = null;
+    var href = null;
     switch (selectedItem) {
         case 1:
             {
                 func = function (rowid) { doOrgClick(rowid); };
+                href = '/../api/projects';
                 break;
             }
         case 2:
             {
                 func = function (rowid) { doContractorClick(rowid); };
+                href = '/../api/contractor';
                 break;
             }
         case 3:
@@ -34,7 +37,7 @@ function processResult() {
             }
     }
     $("#projects").jqGrid({
-        url: $(location).attr('href') + '/../api/projects',
+        url: $(location).attr('href') + href,
         datatype: "json",
         colNames: ['ProjectID','ProjectName', 'ProjectDescription', 'dateCreated', 'CommunityDescription', 'ContractorName', 'Status', 'Price', 'Priority'],
         colModel: [
@@ -55,6 +58,7 @@ function processResult() {
 
 }
 function doOrgClick(id) {
+    //this is the event that will be fired when an organisation is active
 }
 
 function doContractorClick(id) {
